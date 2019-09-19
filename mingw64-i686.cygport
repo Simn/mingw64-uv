@@ -5,8 +5,8 @@ NAME="mingw64-i686-uv"
 VERSION=1.32.0
 RELEASE=1
 CATEGORY="Devel"
-SUMMARY="libuv for Win64 toolchain"
-DESCRIPTION="libuv for Win64 toolchain"
+SUMMARY="libuv for Win32 toolchain"
+DESCRIPTION="libuv for Win32 toolchain"
 HOMEPAGE="https://libuv.org/"
 SRC_URI="https://github.com/libuv/libuv/archive/v${VERSION}.tar.gz"
 SRC_DIR="libuv-${VERSION}"
@@ -20,6 +20,7 @@ src_compile() {
 	lndirs
 
 	cd ${B}
+	export LDFLAGS='-static-libgcc'
 	sh ./autogen.sh
 	./configure --host=${CROSS_HOST} --prefix=${CROSS_SYSROOT} --bindir=${CROSS_BINDIR} --libdir=${CROSS_LIBDIR} --includedir=${CROSS_INCLUDEDIR}
 	make
