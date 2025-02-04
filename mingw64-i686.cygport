@@ -2,7 +2,7 @@ CROSS_HOST="i686-w64-mingw32"
 inherit cross
 
 NAME="mingw64-i686-uv"
-VERSION=1.32.0
+VERSION=1.50.0
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="libuv for Win32 toolchain"
