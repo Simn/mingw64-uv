@@ -10,7 +10,6 @@ DESCRIPTION="libuv for Win64 toolchain"
 HOMEPAGE="https://libuv.org/"
 SRC_URI="https://github.com/libuv/libuv/archive/v${VERSION}.tar.gz"
 SRC_DIR="libuv-${VERSION}"
-PATCH_URI="uv-1.32.0-udp-fix.patch"
 NO_AUTOHEADER=1
 
 DEPEND="automake libtool make"
